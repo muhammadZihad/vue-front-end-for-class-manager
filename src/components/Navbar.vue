@@ -9,7 +9,7 @@
 				<span class="font-weight-bold">Class</span>Manager
 			</v-toolbar-title>
 			<v-spacer></v-spacer>
-			<v-btn text class="teal--text">
+			<v-btn text class="teal--text" link to="/login">
 				<v-icon left>account_circle</v-icon>Login
 			</v-btn>
 		</v-app-bar>
