@@ -3,12 +3,12 @@
         <v-form>
             <v-container class="px-8">
                 <v-row>
-                    <v-col col="12" sm="12" md="3">
+                    <v-col cols="12" md="3">
                         <v-card flat class="pt-2 px-4">
                             <v-select v-model="data.cam" :items="campuses" label="Capmus"></v-select>
                         </v-card>
                     </v-col>
-                    <v-col xs="12" sm="12" md="3">
+                    <v-col cols="12" md="3">
                         <v-card flat class="pt-2 px-4">
                             <v-menu
                                 v-model="fromDateMenu"
@@ -31,12 +31,12 @@
                             </v-menu>
                         </v-card>
                     </v-col>
-                    <v-col xs="12" sm="12" md="3">
+                    <v-col cols="12" md="3">
                         <v-card flat class="pt-2 px-4">
                             <v-select v-model="data.time" :items="times" label="Class Time"></v-select>
                         </v-card>
                     </v-col>
-                    <v-col xs="12" sm="12" md="3" class="d-flex align-center">
+                    <v-col cols="12" md="3" class="d-flex align-center">
                         <v-btn x-large block depressed text color="teal darken-2">
                             <v-icon left>search</v-icon>Search
                         </v-btn>
@@ -47,7 +47,7 @@
                     <h1 class="teal--text">List of empty rooms</h1>
                     <v-container>
                         <v-row>
-                            <v-col xs="4" md="2" lg="1" v-for="(room,i) in rooms" :key="i">
+                            <v-col cols="4" md="2" lg="1" v-for="(room,i) in rooms" :key="i">
                                 <v-card class="text-center pa-2">
                                     <h3>{{room}}</h3>
                                 </v-card>
