@@ -1,6 +1,6 @@
 <template>
     <v-app dark>
-        <Navbar />
+        <Navbar v-if="login"></Navbar>
         <v-content class="grey lighten-3">
             <router-view />
         </v-content>
@@ -16,7 +16,7 @@ export default {
     },
 
     data: () => ({
-        //
+        login: false
     })
 };
 </script>
