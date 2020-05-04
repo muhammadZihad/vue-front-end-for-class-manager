@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
+import Empty from "./components/EmptyRoom";
+import Routine from "./components/Routine";
 
 Vue.use(VueRouter);
 
@@ -14,7 +16,6 @@ export default new VueRouter({
 			path: "/",
 			name: "home",
 			component: Home,
-			meta: { requiresAuth: true },
 		},
 		{
 			path: "/login",
@@ -22,12 +23,19 @@ export default new VueRouter({
 			component: Login,
 		},
 		{
+			path: "/routine",
+			name: "routine",
+			component: Routine,
+		},
+		{
 			path: "/about",
 			name: "about",
 			component: About,
-			beforeEnter: (to, from, next) => {
-				next({ path: "/login", query: { redirect: to.fullPath } });
-			},
+		},
+		{
+			path: "/emptyroom",
+			name: "emptyroom",
+			component: Empty,
 		},
 	],
 });

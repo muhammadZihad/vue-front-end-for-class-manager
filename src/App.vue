@@ -1,22 +1,20 @@
 <template>
-    <v-app dark>
-        <Navbar v-if="login"></Navbar>
-        <v-content class="grey lighten-3">
-            <router-view />
-        </v-content>
-    </v-app>
+	<v-app dark>
+		<Navbar />
+		<v-content class="grey lighten-3">
+			<router-view />
+		</v-content>
+	</v-app>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
 export default {
-    name: "App",
-    components: {
-        Navbar
-    },
+	name: "App",
+	components: {
+		Navbar,
+	},
 
-    data: () => ({
-        login: false
-    })
+	data: () => ({}),
 };
 </script>
